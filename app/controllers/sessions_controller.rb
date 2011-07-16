@@ -16,5 +16,13 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_url, :notice => "Logged out!"
  end
+
+ private
+  def current_user
+      @current_user ||= User.find(session[:user_id]) if session
+       [:user_id]
+     end
+   helper_method :current_user
+
 end
 
