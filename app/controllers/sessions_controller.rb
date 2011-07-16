@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     if # authenticated?
       session[:user_id] = user.id
-      redirect_to root_url, :notice => "Logado!"
+      redirect_to index_url, :notice => "Logado!"
     else
       flash.now.alert = "Senha ou email inválidos"
       render "new"
