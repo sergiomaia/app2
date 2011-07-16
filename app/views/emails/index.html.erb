@@ -1,6 +1,9 @@
-<% @movies.each do |movie| %>
+<h1>Listando emails recebidos da app1 </h1>
 
-   <%= email.address %>
-
+<% @emails.each do |email| %>
+<hr>
+<ul>
+   <li><%= email.address %></li>
+</ul>
 <%end%>
 
